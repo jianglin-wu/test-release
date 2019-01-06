@@ -2,6 +2,13 @@ language: node_js
 node_js:
   - "8"
 install: npm install
-script: npm run test
+script:
+  - npm run test
+  - echo GH_TOKEN:
+  - echo $GH_TOKEN
+  - echo GH_URL:
+  - echo $GH_URL
+  - echo GH_PREFIX:
+  - echo $GH_PREFIX
 after_success:
   - npm run semantic-release
